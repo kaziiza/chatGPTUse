@@ -1,0 +1,23 @@
+version: 1
+overlay: mark_sanitize
+overrides:
+  pricing:
+    reference:
+      prefer: ["mark", "mid", "index"]
+      fallback_to_mid_on:
+        - mark_missing
+        - mark_stale
+        - mark_outlier
+    mark_sanitize:
+      median_ms: 1000
+      zscore_cap: 5.0
+      max_jump_bps: 150
+      max_age_ms: 500
+  slippage:
+    compute_basis: mid_submit
+    error_for_gate:
+      clip_bps: 300
+      exclude_when_mark_flagged: true
+  monitoring:
+    slippage:
+      reference_price: mid_submit

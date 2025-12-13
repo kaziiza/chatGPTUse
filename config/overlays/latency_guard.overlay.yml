@@ -1,0 +1,15 @@
+version: 1
+overlay: latency_guard
+overrides:
+  ingestion_guard:
+    e2e_latency_ms:
+      warn_p95: 250
+      stop_new_entries_p95: 400
+    evaluation_interval_s: 5
+    cooldown_on_slip_spike:
+      consecutive: 3
+      slip_error_bps: 120
+      cooldown_sec: 300
+  ws:
+    single_multiplex_stream: true
+    flush_batch_ms: 10
