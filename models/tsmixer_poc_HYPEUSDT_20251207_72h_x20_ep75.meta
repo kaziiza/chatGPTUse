@@ -1,0 +1,25 @@
+{
+  "trained_at": 1765489321.2916527,
+  "device": "cuda",
+  "metrics": {
+    "val_loss": 1.120609598410757,
+    "epoch": 3
+  },
+  "hyperparameters": {
+    "epochs": 75,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.1,
+    "label_smoothing": 0.0,
+    "d_model": 128,
+    "n_layers": 4,
+    "early_stop": 5,
+    "pos_weight": 6.63819095477387,
+    "sample_weights": null,
+    "balanced_sampler": "",
+    "symbol_weights": "",
+    "hard_negative_json": null,
+    "hard_negative_weight": 1.0
+  }
+}
